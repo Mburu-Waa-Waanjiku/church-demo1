@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  color: white;
+}
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 0, 0, 0, 0.8;
+  --background-start-rgb: 220, 220, 220;
+  --background-end-rgb: 255, 255, 255;
+  --background-whitelucentl-rgb: 255, 255, 255, 0.4;
+  --background-whitelucent-rgb: 255, 255, 255, 0.8;
+  --background-transparent-rgb: 255, 255, 255, 0;
+}
+input, textarea, ::after, ::before {
+  border-top-color: transparent !important;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+  border-bottom-color: gray !important;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.video-container { 
+  position: relative; 
+  padding-bottom: 56.25%; 
+  padding-top: 30px; 
+  height: 0; 
+  overflow: hidden; 
+}
+.video-container iframe, .video-container object, .video-container embed { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+}
+.show {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.show:hover {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all ease-out .4s;
+}
+.myBlacktransparent {
+  background-color: rgba(var(--foreground-rgb));
+}
+.mytranslucentbg {
+  background-color: rgb(var(--background-whitelucent-rgb));
+}
+.mytransparentbg {
+  background-color: rgb(var(--background-whitelucentl-rgb));
+}
+.menuTransition {
+  width: 200px;
+  transition: left 1s;
+}
+.btnhov :hover {
+  background-color: rgb(var(--background-whitelucentl-rgb));
+}
+.myButtonstyle {
+  border: 2px solid black;
+}
+.transition-dispaly {
+  transition: all ease-out 1s;
+}
